@@ -50,8 +50,16 @@ const navigate = (direction) => {
   updateSlider(currentIndex);
 };
 
-document.querySelector(".arrow_left").addEventListener("click", () => navigate(-1));
-document.querySelector(".arrow_right").addEventListener("click", () => navigate(1));
+document.querySelector(".arrow_left").addEventListener("click", () => {
+  navigate(-1);
+  console.log("Clique sur la Flèche de gauche!");
+});
+
+document.querySelector(".arrow_right").addEventListener("click", () => {
+  navigate(1);
+  console.log("Clique sur la fleche de droite!");
+});
 
 // Affichage initial
 updateSlider(currentIndex);
+
